@@ -1,8 +1,8 @@
+import 'package:expense_tracker_app/core/routes/app_routes.dart';
 import 'package:expense_tracker_app/views/widgets/change_screen_box.dart';
 import 'package:expense_tracker_app/views/widgets/primary_button.dart';
 import 'package:expense_tracker_app/views/widgets/secondary_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -42,7 +42,14 @@ class WelcomeScreen extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     SizedBox(height: 40),
-                    PrimaryButton(text: "Continue Without Sign In", width: 235),
+                    GestureDetector(
+                      onTap: () =>
+                          Navigator.pushNamed(context, AppRoutes.homeScreen),
+                      child: PrimaryButton(
+                        text: "Continue Without Sign In",
+                        width: 235,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -51,7 +58,10 @@ class WelcomeScreen extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 30),
-                  child: ChangeScreenBox(icon: Icons.arrow_back),
+                  child: GestureDetector(
+                    onTap: () => Navigator.pop(context),
+                    child: ChangeScreenBox(icon: Icons.arrow_back),
+                  ),
                 ),
               ],
             ),

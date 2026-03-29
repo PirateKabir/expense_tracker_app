@@ -1,3 +1,4 @@
+import 'package:expense_tracker_app/core/routes/app_routes.dart';
 import 'package:expense_tracker_app/views/widgets/change_screen_box.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +43,11 @@ class DemoScreen extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(right: 30, bottom: 10),
-                  child: ChangeScreenBox(icon: Icons.arrow_forward),
+                  child: GestureDetector(
+                    onTap: () =>
+                        Navigator.pushNamed(context, AppRoutes.budgetScreen),
+                    child: ChangeScreenBox(icon: Icons.arrow_forward),
+                  ),
                 ),
               ],
             ),

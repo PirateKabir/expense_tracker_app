@@ -1,4 +1,5 @@
 import 'package:expense_tracker_app/core/constants/app_colors.dart';
+import 'package:expense_tracker_app/core/routes/app_routes.dart';
 import 'package:expense_tracker_app/views/widgets/budget_text_field.dart';
 import 'package:expense_tracker_app/views/widgets/change_screen_box.dart';
 import 'package:expense_tracker_app/views/widgets/primary_button.dart';
@@ -72,8 +73,15 @@ class CreateBudgetScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ChangeScreenBox(icon: Icons.arrow_back),
-                  ChangeScreenBox(icon: Icons.arrow_forward),
+                  GestureDetector(
+                    onTap: () => Navigator.pop(context),
+                    child: ChangeScreenBox(icon: Icons.arrow_back),
+                  ),
+                  GestureDetector(
+                    onTap: () =>
+                        Navigator.pushNamed(context, AppRoutes.welcomeScreen),
+                    child: ChangeScreenBox(icon: Icons.arrow_forward),
+                  ),
                 ],
               ),
             ),
