@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+
+class AppColors {
+  //Light Mode
+  static const Color lightBackground = Colors.white;
+  static const Color lightPrimary = Colors.white;
+  static const Color lightSecondary = Colors.black;
+  static const Color lightbodyMedium = Colors.black;
+  static const Color lightonPrimaryContainer = Color(0xFFC0C0C0);
+  static const Color lightonSecondaryContainer = Color(0xFFE5E4E2);
+  static const Color lightonSecondaryFixed = Color.fromARGB(255, 134, 133, 133);
+  static const Color lightPrimaryContainer = Colors.white;
+  //Dark Mode
+  static const Color darkBackground = Colors.black;
+  static const Color darkPrimary = Colors.black;
+  static const Color darksSecondary = Colors.white;
+  static const Color darkbodyMedium = Colors.white;
+  static const Color darkonPrimaryContainer = Color(0xFFC0C0C0);
+  static const Color darkonSecondaryContainer = Color(0xFFE5E4E2);
+  static const Color darkonSecondaryFixed = Color.fromARGB(255, 134, 133, 133);
+  static const Color darkPrimaryContainer = Colors.white;
+}
