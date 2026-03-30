@@ -30,6 +30,22 @@ class AppTheme {
         fontSize: 20,
         fontWeight: FontWeight.bold,
       ),
+      headlineLarge: TextStyle(
+        color: AppColors.lightSecondary,
+        fontSize: 40,
+        fontWeight: FontWeight.bold,
+      ),
+      bodyLarge: TextStyle(
+        color: AppColors.lightbodyMedium,
+        fontSize: 19,
+        fontWeight: FontWeight.w500,
+      ),
+      bodySmall: TextStyle(
+        color: AppColors.lightonSecondaryFixed,
+        fontSize: 12,
+        fontWeight: FontWeight.w300,
+      ),
+      titleSmall: TextStyle(color: AppColors.lightbodyMedium, fontSize: 12),
     ),
   );
   //Dark Theme

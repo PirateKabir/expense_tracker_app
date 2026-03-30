@@ -22,13 +22,17 @@ class SecondaryButton extends StatelessWidget {
         color: Theme.of(context).colorScheme.primaryContainer,
         border: Border.all(width: 2),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SvgPicture.asset(Icon, height: 30),
-          SizedBox(width: 10),
-          Text(text, style: Theme.of(context).textTheme.bodyMedium),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(left: 13),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SvgPicture.asset("assets/icons/$Icon.svg", height: 30),
+            SizedBox(width: 10),
+            Text(text, style: Theme.of(context).textTheme.bodyMedium),
+          ],
+        ),
       ),
     );
   }

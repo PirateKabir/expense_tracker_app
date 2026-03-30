@@ -61,7 +61,9 @@ class CreateBudgetScreen extends StatelessWidget {
                     SizedBox(height: 20),
                     Text(
                       "You can always edit this later.",
-                      style: TextStyle(color: AppColors.lightonSecondaryFixed),
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.onSecondaryFixed,
+                      ),
                     ),
                   ],
                 ),

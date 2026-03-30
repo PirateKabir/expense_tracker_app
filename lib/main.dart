@@ -1,10 +1,6 @@
 import 'package:expense_tracker_app/core/routes/app_pages.dart';
 import 'package:expense_tracker_app/core/routes/app_routes.dart';
 import 'package:expense_tracker_app/core/themes/app_theme.dart';
-import 'package:expense_tracker_app/views/screens/onboarding/create_budget_screen.dart';
-import 'package:expense_tracker_app/views/screens/onboarding/demo_screen.dart';
-import 'package:expense_tracker_app/views/screens/onboarding/home_screen.dart';
-import 'package:expense_tracker_app/views/screens/onboarding/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: AppRoutes.demoScreen,
+      initialRoute: AppRoutes.moreScreen,
       onGenerateRoute: AppPages.generateRoute,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
