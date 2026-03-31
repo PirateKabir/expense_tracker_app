@@ -16,6 +16,7 @@ class AppTheme {
       onSecondaryContainer: AppColors.lightonSecondaryContainer,
       onSecondaryFixed: AppColors.lightonSecondaryFixed,
       primaryContainer: AppColors.lightPrimaryContainer,
+      onSurface: AppColors.lightonSurface,
     ),
 
     textTheme: const TextTheme(

@@ -1,4 +1,5 @@
 import 'package:expense_tracker_app/core/routes/app_routes.dart';
+import 'package:expense_tracker_app/views/screens/home/edit_home.dart';
 import 'package:expense_tracker_app/views/screens/more/more_screen.dart';
 import 'package:expense_tracker_app/views/screens/onboarding/create_budget_screen.dart';
 import 'package:expense_tracker_app/views/screens/onboarding/demo_screen.dart';
@@ -21,6 +22,8 @@ class AppPages {
       //Home Screens
       case AppRoutes.homeScreen:
         return MaterialPageRoute(builder: (_) => HomeScreen());
+      case AppRoutes.editHome:
+        return MaterialPageRoute(builder: (_) => EditHome());
 
       //More Screens
       case AppRoutes.moreScreen:

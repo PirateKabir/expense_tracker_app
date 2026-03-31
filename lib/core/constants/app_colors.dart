@@ -10,6 +10,7 @@ class AppColors {
   static const Color lightonSecondaryContainer = Color(0xFFE5E4E2);
   static const Color lightonSecondaryFixed = Color.fromARGB(255, 134, 133, 133);
   static const Color lightPrimaryContainer = Colors.white;
+  static const Color lightonSurface = Color.fromARGB(255, 66, 66, 66);
   //Dark Mode
   static const Color darkBackground = Colors.black;
   static const Color darkPrimary = Colors.black;
@@ -19,4 +20,5 @@ class AppColors {
   static const Color darkonSecondaryContainer = Color(0xFFE5E4E2);
   static const Color darkonSecondaryFixed = Color.fromARGB(255, 134, 133, 133);
   static const Color darkPrimaryContainer = Colors.white;
+  static const Color darkonSurface = Color.fromARGB(255, 66, 66, 66);
 }
