@@ -44,8 +44,10 @@ class DemoScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 30, bottom: 10),
                   child: GestureDetector(
-                    onTap: () =>
-                        Navigator.pushNamed(context, AppRoutes.budgetScreen),
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      AppRoutes.createbudgetScreen,
+                    ),
                     child: ChangeScreenBox(icon: Icons.arrow_forward),
                   ),
                 ),

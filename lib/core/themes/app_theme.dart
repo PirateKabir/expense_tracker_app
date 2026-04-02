@@ -17,6 +17,9 @@ class AppTheme {
       onSecondaryFixed: AppColors.lightonSecondaryFixed,
       primaryContainer: AppColors.lightPrimaryContainer,
       onSurface: AppColors.lightonSurface,
+      onBackground: AppColors.lightappBarBg,
+      surfaceContainer: AppColors.lightbudgetCard,
+      surface: AppColors.lightbudgetCardBg,
     ),
 
     textTheme: const TextTheme(
