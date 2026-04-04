@@ -6,4 +6,5 @@ class AppRoutes {
   static const moreScreen = "/moreScreen";
   static const editHome = "/editHome";
   static const budgetScreen = "/budgetScreen";
+  static const transactionScreen = "/transactionScreen";
 }

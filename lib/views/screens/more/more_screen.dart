@@ -10,7 +10,7 @@ class MoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScaffoldSkeleton(
-      icon: "homepage_banner",
+      icon2: "homepage_banner",
       text: "More Actions",
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),

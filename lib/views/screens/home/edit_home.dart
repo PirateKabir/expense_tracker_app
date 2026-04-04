@@ -8,7 +8,6 @@ class EditHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScaffoldSkeleton(
-      back: true,
       bottomPadding: 0,
       text: "Edit Home",
       child: Padding(

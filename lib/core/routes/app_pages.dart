@@ -6,6 +6,7 @@ import 'package:expense_tracker_app/views/screens/onboarding/create_budget_scree
 import 'package:expense_tracker_app/views/screens/onboarding/demo_screen.dart';
 import 'package:expense_tracker_app/views/screens/home/home_screen.dart';
 import 'package:expense_tracker_app/views/screens/onboarding/welcome_screen.dart';
+import 'package:expense_tracker_app/views/screens/transaction/transaction_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -33,6 +34,10 @@ class AppPages {
       //Budget Screen
       case AppRoutes.budgetScreen:
         return MaterialPageRoute(builder: (_) => BudgetScreen());
+
+      //Transaction Screen
+      case AppRoutes.transactionScreen:
+        return MaterialPageRoute(builder: (_) => TransactionScreen());
 
       //Error Screen
       default:

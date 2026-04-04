@@ -1,6 +1,5 @@
 import 'package:expense_tracker_app/views/widgets/scaffold_skeleton.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class BudgetScreen extends StatelessWidget {
   const BudgetScreen({super.key});
@@ -8,7 +7,7 @@ class BudgetScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScaffoldSkeleton(
-      icon: "homepage_banner",
+      icon2: "homepage_banner",
       text: "Budgets",
       child: Column(
         children: [

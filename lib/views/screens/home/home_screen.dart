@@ -5,9 +5,27 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Column(children: [
-
-      ],
-    ));
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 22),
+          child: Column(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [Icon(Icons.more_vert, size: 32)],
+                  ),
+                  SizedBox(height: 80),
+                  Text("Home", style: Theme.of(context).textTheme.labelLarge),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
