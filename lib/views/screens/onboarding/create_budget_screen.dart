@@ -1,5 +1,7 @@
 import 'package:expense_tracker_app/core/constants/app_colors.dart';
 import 'package:expense_tracker_app/core/routes/app_routes.dart';
+import 'package:expense_tracker_app/core/services/navigation_services.dart';
+import 'package:expense_tracker_app/viewmodels/create_budget_screen_vm.dart';
 import 'package:expense_tracker_app/views/widgets/budget_text_field.dart';
 import 'package:expense_tracker_app/views/widgets/change_screen_box.dart';
 import 'package:expense_tracker_app/views/widgets/primary_button.dart';
@@ -10,6 +12,7 @@ class CreateBudgetScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final createBudgetVm = CreateBudgetScreenVm(navigationServices);
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
@@ -76,12 +79,15 @@ class CreateBudgetScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
-                    onTap: () => Navigator.pop(context),
+                    onTap: () {
+                      createBudgetVm.goback();
+                    },
                     child: ChangeScreenBox(icon: Icons.arrow_back),
                   ),
                   GestureDetector(
-                    onTap: () =>
-                        Navigator.pushNamed(context, AppRoutes.welcomeScreen),
+                    onTap: () {
+                      createBudgetVm.gowelcome();
+                    },
                     child: ChangeScreenBox(icon: Icons.arrow_forward),
                   ),
                 ],

@@ -1,4 +1,6 @@
 import 'package:expense_tracker_app/core/routes/app_routes.dart';
+import 'package:expense_tracker_app/core/services/navigation_services.dart';
+import 'package:expense_tracker_app/viewmodels/demo_screen_vm.dart';
 import 'package:expense_tracker_app/views/widgets/change_screen_box.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +9,7 @@ class DemoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final demoScreenvm = DemoScreenVm(navigationServices);
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
@@ -44,10 +47,9 @@ class DemoScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 30, bottom: 10),
                   child: GestureDetector(
-                    onTap: () => Navigator.pushNamed(
-                      context,
-                      AppRoutes.createbudgetScreen,
-                    ),
+                    onTap: () {
+                      demoScreenvm.gobudget();
+                    },
                     child: ChangeScreenBox(icon: Icons.arrow_forward),
                   ),
                 ),

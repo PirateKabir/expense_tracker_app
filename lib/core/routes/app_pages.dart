@@ -2,6 +2,7 @@ import 'package:expense_tracker_app/core/routes/app_routes.dart';
 import 'package:expense_tracker_app/views/screens/budget/budget_screen.dart';
 import 'package:expense_tracker_app/views/screens/home/edit_home.dart';
 import 'package:expense_tracker_app/views/screens/more/more_screen.dart';
+import 'package:expense_tracker_app/views/screens/navbar/bottom_navbar.dart';
 import 'package:expense_tracker_app/views/screens/onboarding/create_budget_screen.dart';
 import 'package:expense_tracker_app/views/screens/onboarding/demo_screen.dart';
 import 'package:expense_tracker_app/views/screens/home/home_screen.dart';
@@ -38,6 +39,10 @@ class AppPages {
       //Transaction Screen
       case AppRoutes.transactionScreen:
         return MaterialPageRoute(builder: (_) => TransactionScreen());
+
+      //BottomNav Screen
+      case AppRoutes.bottomNavbar:
+        return MaterialPageRoute(builder: (_) => BottomNavbar());
 
       //Error Screen
       default:

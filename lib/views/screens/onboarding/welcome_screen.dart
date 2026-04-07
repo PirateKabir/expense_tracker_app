@@ -1,4 +1,6 @@
 import 'package:expense_tracker_app/core/routes/app_routes.dart';
+import 'package:expense_tracker_app/core/services/navigation_services.dart';
+import 'package:expense_tracker_app/viewmodels/welcome_screen_vm.dart';
 import 'package:expense_tracker_app/views/widgets/change_screen_box.dart';
 import 'package:expense_tracker_app/views/widgets/primary_button.dart';
 import 'package:expense_tracker_app/views/widgets/secondary_button.dart';
@@ -9,6 +11,7 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final welcomeScreenVm = WelcomeScreenVm(navigationServices);
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
@@ -32,7 +35,7 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 30),
                     SecondaryButton(
-                      Icon: "assets/icons/google_icon.svg",
+                      Icon: "google_icon",
                       text: "Sign In with Google",
                     ),
                     SizedBox(height: 15),
@@ -43,8 +46,9 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 40),
                     GestureDetector(
-                      onTap: () =>
-                          Navigator.pushNamed(context, AppRoutes.homeScreen),
+                      onTap: () {
+                        welcomeScreenVm.gonav();
+                      },
                       child: PrimaryButton(
                         text: "Continue Without Sign In",
                         width: 235,
@@ -59,7 +63,9 @@ class WelcomeScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 30),
                   child: GestureDetector(
-                    onTap: () => Navigator.pop(context),
+                    onTap: () {
+                      welcomeScreenVm.goback();
+                    },
                     child: ChangeScreenBox(icon: Icons.arrow_back),
                   ),
                 ),

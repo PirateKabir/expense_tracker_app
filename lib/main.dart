@@ -1,5 +1,6 @@
 import 'package:expense_tracker_app/core/routes/app_pages.dart';
 import 'package:expense_tracker_app/core/routes/app_routes.dart';
+import 'package:expense_tracker_app/core/services/navigation_services.dart';
 import 'package:expense_tracker_app/core/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: AppRoutes.transactionScreen,
+      navigatorKey: navigationServices.navigatorKey,
+      initialRoute: AppRoutes.demoScreen,
       onGenerateRoute: AppPages.generateRoute,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,

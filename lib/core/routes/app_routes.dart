@@ -7,4 +7,5 @@ class AppRoutes {
   static const editHome = "/editHome";
   static const budgetScreen = "/budgetScreen";
   static const transactionScreen = "/transactionScreen";
+  static const bottomNavbar = "/bottomNavbar";
 }
